@@ -1,0 +1,34 @@
+﻿@page
+@model NewsModel
+@{
+    ViewData["Title"] = "Trident Sports Club News and Updates";
+}
+
+
+<div class="row">
+
+    <div class="col-md-5">
+        <h2>@ViewData["Title"]</h2>
+        <p> <a href="/Index"><img src="~/images/Common/trident-long.jpeg" alt="Trident sports club" class="img-responsive" /></a> </p>
+        
+
+    </div>
+    <div class="col-md-5">
+
+        <h2>News from SCF </h2>
+        <table>
+            @foreach (var item in Model.SCFNewsCollection) {
+            <tr style="border-bottom:solid 1px darkgrey;">
+                <td>
+                    <div><a href="  @Html.DisplayFor(modelItem => item.URL)">@Html.DisplayFor(modelItem => item.Title)</a></div>
+                    <div> Published on : @Html.DisplayFor(modelItem => item.ReleaseDate)</div>
+                    <div style="font-family:Calibri;font-size:1em;color:black"> @Html.DisplayFor(modelItem => item.Description)</div>
+                   
+                </td>
+            </tr>
+}
+        </table>
+       
+    </div>
+
+</div>
