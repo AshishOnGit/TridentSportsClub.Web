@@ -15,6 +15,70 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+
+        .tsc_navbar {
+            overflow: hidden;
+            background-color: black;
+        }
+
+            .tsc_navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .tsc_dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            .tsc_dropdown .tsc_dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .tsc_navbar a:hover, .tsc_dropdown:hover .dropbtn {
+                background-color: darkblue;
+            }
+
+        .tsc_dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .tsc_dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .tsc_dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .tsc_dropdown:hover .tsc_dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -32,14 +96,35 @@
 
                 <a asp-page="/Index" class="navbar-brand"><img src="~/images/Common/trident.png" alt="Trident Sports Club" height="40em" style="top:-20px" /></a>
             </div>
-            <div class="navbar-collapse collapse">
+            @*<div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                    <li><a asp-page="/Event">Events</a></li>
+                    <li><a asp-page="/News">News</a></li>
+                    <li><a asp-page="/Supportors">Supportors</a></li>
+                    <li><a asp-page="/Ourclub">Our Club</a></li>
+                    <li class="nav"><a asp-page="/Ourclub/Members">Members</a></li>
+                    <li><a asp-page="/Ourclub/docs">Club Documents</a></li>
+
                 </ul>
+            </div>*@
+        <div  class="navbar-collapse collapse">
+            <div class="tsc_navbar">
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/News">News</a>
+                <a asp-page="/Supportors">Supportors</a>
+                <div class="tsc_dropdown">
+                    <button class="tsc_dropbtn">
+                        Our Club
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="tsc_dropdown-content">
+                        <a asp-page="/Members">Members</a>
+                        <a asp-page="/docs">Club Documents</a>
+                        <a asp-page="/contact">Contact us</a>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </nav>
 
@@ -50,7 +135,12 @@
         <hr />
         <footer>
             <p>&copy; 2019 - Trident Sports Club</p>
+            <p>
+                <span><b>Follow us on </b></span><a href="https://www.facebook.com/tridensportsclub"><img alt="Trident sports club FB page" src="~/images/Common/fb.png" width="40px" /></a>
+                <a href="https://twitter.com/tridentscsweden"><img alt="Trident sports club Twitter" src="~/images/Common/twitter.png" width="40px" /></a>
+            </p>
         </footer>
+
     </div>
 
     <environment include="Development">
