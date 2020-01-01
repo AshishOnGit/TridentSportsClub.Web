@@ -14,5 +14,7 @@ namespace TridentSportsClub.Web.Pages
         {
             Message = "Your contact page.";
         }
+
+        
     }
 }

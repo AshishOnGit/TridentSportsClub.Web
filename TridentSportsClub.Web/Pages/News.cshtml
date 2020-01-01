@@ -9,26 +9,54 @@
 
     <div class="col-md-5">
         <h2>@ViewData["Title"]</h2>
+
         <p> <a href="/Index"><img src="~/images/Common/trident-long.jpeg" alt="Trident sports club" class="img-responsive" /></a> </p>
-        
+        <table>
+
+
+            <tr style="border-bottom:solid 1px darkgrey;">
+                <td>
+                    <div><a href="/News/TheBeginning">The Beginning</a></div>
+                    <div> Published on : September 2019</div>
+                    <div style="font-family:Calibri;font-size:1em;color:black">
+                        Trident Sports Club was formed on September 2019, primarily focused on Cricket, in Stockholm. The club was formed jointly by 3 members, and later followed by 15+ members in a mere one month. The club constitution was drafted and compiled, with support of RF and SCF governing members. Trident Sports Club is registered with the local tax office (Skatteverket), RF (RiksidrottsFörbundet), Stockholm Stad, SCF (Svenska Cricket Förbundet) and Idorttonline. The club registered an online domain (https://tridentsportsclub.com) , and also to manage and administrate all club artifacts, the club has licensed Office 365 f
+                    </div>
+
+                </td>
+            </tr>
+            <tr style="border-bottom:solid 1px darkgrey;">
+                <td>
+                    <div><a href="/News/Founded">The Board is founded</a></div>
+                    <div> Published on : September 2019</div>
+                    <div style="font-family:Calibri;font-size:1em;color:black">
+                       <div>The board was founded in the first members meeting in September 2019.</div>
+                        
+                    </div>
+
+                </td>
+            </tr>
+
+        </table>
 
     </div>
     <div class="col-md-5">
 
         <h2>News from SCF </h2>
         <table>
-            @foreach (var item in Model.SCFNewsCollection) {
-            <tr style="border-bottom:solid 1px darkgrey;">
-                <td>
-                    <div><a href="  @Html.DisplayFor(modelItem => item.URL)">@Html.DisplayFor(modelItem => item.Title)</a></div>
-                    <div> Published on : @Html.DisplayFor(modelItem => item.ReleaseDate)</div>
-                    <div style="font-family:Calibri;font-size:1em;color:black"> @Html.DisplayFor(modelItem => item.Description)</div>
-                   
-                </td>
-            </tr>
-}
+            @foreach (var item in Model.SCFNewsCollection)
+            {
+              
+                <tr style="border-bottom:solid 1px darkgrey;">
+                    <td>
+                        <div><a href="  @Html.DisplayFor(modelItem => item.URL)">@Html.DisplayFor(modelItem => item.Title)</a></div>
+                        <div> Published on : @Html.DisplayFor(modelItem => item.ReleaseDate)</div>
+                        <div style="font-family:Calibri;font-size:1em;color:black"> @Html.DisplayFor(modelItem => item.Description)</div>
+
+                    </td>
+                </tr>
+            }
         </table>
-       
+
     </div>
 
 </div>

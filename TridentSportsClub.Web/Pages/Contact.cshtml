@@ -5,33 +5,54 @@
 }
 
 
-    <div class="row">
-        <h2>@ViewData["Title"]</h2>
-        <div class="col-md-5">
-            
-            <div>
-                <h3>Join Us</h3>
-                <iframe width="640px" height="680px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=KlvX0tOpsEixIyg17cEc8_QYqUPxPmBMlbiF11ewVS9UQjVSRDk5SjVIMjQ0MlZKTDdSWEY1RlZFNC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-            </div>
+<div class="row">
+    <h2>@ViewData["Title"]</h2>
+    <div class="col-md-5">
+
+        <div>
+            <h3>Please send all your queries to <a href="mailto:info@tridentsportsclub.com">info@tridentsportsclub.com</a> </h3>
+            <iframe width="640px" height="2080px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=KlvX0tOpsEixIyg17cEc8_QYqUPxPmBMlbiF11ewVS9UQjVSRDk5SjVIMjQ0MlZKTDdSWEY1RlZFNC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:1200px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         </div>
+        @*<div>
+            or submit your query through below form
+            <form role="form" asp-action="Contact">
+                <div class="form-group">
+                    <label class="control-label" for="exampleInputName">Full Name</label>
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your full Name">
+                    <label class="control-label" for="exampleInputEmail">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter our valid email">
+                    <label class="control-label" for="exampleInputPhone">Phone Number</label>
+                    <input type="text" class="form-control" id="exampleInputPhone" placeholder="Enter Phone number">
+                    <label class="control-label" for="exampleInputQuery">Your Query</label>
+                    <textarea class="form-control" id="exampleInputQuery" placeholder="Enter your Query"></textarea>
+                </div>
 
-        <div class="col-md-5">
-
-            <h2>Connect with us</h2>
-            <img src="~/images/Common/JoinTrident.png" height="200" width="200" alt="QR code to join the club" />
-            <h2>Connect through e-mail</h2>
-            <p> <a href="mailto:info@tridentsportsclub.com"><img src="~/images/Common/mail.png" alt="Sponsor placeholder" class="img-responsive" /></a> </p>
-
-            <h2>Like to Sponsor us</h2>
-            <p> <a href="mailto:sponsor@tridentsportsclub.com"><img src="~/images/Common/mail.png" alt="Sponsor placeholder" class="img-responsive" /></a> Be our Sponsor </p>
-            <h2> Find us </h2>
-            <address>
-                Trident Sports Club<br />
-                Org number: 802526-1440<br />
-                Kista, Sweden<br />
-                <abbr title="Phone">+46 73 408 3252</abbr>
-            </address>
-        </div>
-
+                <button type="submit" class="btn btn-default" onclick="">Submit</button>
+            </form>
+        </div>*@
     </div>
+
+    <div class="col-md-5" >
+        <h2>Trident Sports Club Contacts</h2>
+        <table width="100%" cellspacing="10px" cellpadding="10px" style="border-bottom:solid 1px grey">
+
+            <tr style="border-bottom:solid 1px grey"><td>Chairman </td><td>Amarnath Das </td><td>andy@tridentsportsclub.com</td></tr>
+            <tr style="border-bottom:solid 1px grey"><td>Vice-Chairman </td><td>Vaibhav Singh </td><td>vaibhav@tridentsportsclub.com</td></tr>
+            <tr style="border-bottom:solid 1px grey"><td>Secretary </td><td>Rajendra Bogati </td><td>rajendra@tridentsportsclub.com</td></tr>
+            <tr style="border-bottom:solid 1px grey"><td>Treasury </td><td>Ashish Ranjan </td><td>ashish@tridentsportsclub.com</td></tr>
+
+            <tr style="border-bottom:solid 1px grey"><td>Club Captain </td><td>TBD </td><td>---------</td></tr>
+            <tr style="border-bottom:solid 1px grey"><td>On Field Captain </td><td>TBD </td><td>----------</td></tr>
+            <tr style="border-bottom:solid 1px grey"><td>Social Secretary </td><td>TBD </td><td>----------</td></tr>
+        </table>
+        <h2> Find us </h2>
+        <address>
+            Trident Sports Club<br />
+            Org number: 802526-1440<br />
+            Kista, Sweden<br />
+            <abbr title="Phone">+46 73 408 3252</abbr>
+        </address>
+    </div>
+
+</div>
 

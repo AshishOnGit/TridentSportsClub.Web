@@ -4,7 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Trident Sports Club</title>
+    <!--start:Google analytics-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155219050-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'UA-155219050-1');
+    </script>
+    <!--end:Google analytics-->
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -17,7 +27,7 @@
     </environment>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        
+
 
         .tsc_navbar {
             overflow: hidden;
@@ -124,7 +134,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - Trident Sports Club</p>
+            <p>&copy; @DateTime.Now.Year - Trident Sports Club</p>
             <p>
                 <span><b>Follow us on </b></span><a href="https://www.facebook.com/tridensportsclub"><img alt="Trident sports club FB page" src="~/images/Common/fb.png" width="40px" /></a>
                 <a href="https://twitter.com/tridentscsweden"><img alt="Trident sports club Twitter" src="~/images/Common/twitter.png" width="40px" /></a>

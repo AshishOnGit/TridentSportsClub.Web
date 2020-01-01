@@ -47,16 +47,21 @@ namespace TridentSportsClub.Web.Pages
                 XmlNodeList idNodes = newsUrl.SelectNodes("channel/item");
                 StringBuilder sb = new StringBuilder();
                 int count = 0;
-                count = idNodes.Count;
+                //count = idNodes.Count;
                 List<SCFNews> collNews = new List<SCFNews>();
+                
                 foreach (XmlNode node in idNodes)
                 {
-                    SCFNews oNews = new SCFNews();
-                    oNews.Title = node["title"].InnerText;
-                    oNews.URL = node["link"].InnerText;
-                    oNews.Description = node["mainIntro"].InnerText;
-                    oNews.ReleaseDate = node["pubDate"].InnerText;
-                    collNews.Add(oNews);
+                    if (count <= 10)
+                    {
+                        SCFNews oNews = new SCFNews();
+                        oNews.Title = node["title"].InnerText;
+                        oNews.URL = node["link"].InnerText;
+                        oNews.Description = node["mainIntro"].InnerText;
+                        oNews.ReleaseDate = node["pubDate"].InnerText;
+                        collNews.Add(oNews);
+                        count++;
+                    }
                 }
                 return collNews;
             }
